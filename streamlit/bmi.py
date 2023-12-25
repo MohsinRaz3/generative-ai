@@ -6,26 +6,26 @@ st.set_page_config(
 )
 
 st.title("BMI Calculator: Calculate your BMI")
-weight = st.number_input("Type your weight in kg ")
+weight = st.number_input("Type your weight in kg", value=1)
 
 h_measure = st.radio("Select height format", ["cm","feet","meters"])
 
 if h_measure == "cm":
-    height = st.number_input("Type your height in cm")
+    height = st.number_input("Type your height in cm", value=1)
 
     try:
         bmi = (weight/((height/100)**2))
     except:
         st.write("")
 elif h_measure=="feet": 
-    height = st.number_input("Type your height in feet")
+    height = st.number_input("Type your height in feet", value=1)
     try:
         bmi = (weight/(((height/3.28))**2))
     except:
         st.write("")
 
 else:
-    height = st.number_input("Type your height in meters")
+    height = st.number_input("Type your height in meters", value=1)
     try:
        bmi = (weight/(height**2))
     except:
