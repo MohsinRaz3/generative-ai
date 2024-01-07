@@ -1,6 +1,8 @@
 import streamlit as st
 from sqlalchemy.sql import text
+
 conn = st.connection('pets_db', type='sql')
+
 with conn.session as s:
     s.execute(text('CREATE TABLE IF NOT EXISTS pet_owners (person TEXT, pet TEXT);'))
     s.execute(text('DELETE FROM pet_owners;'))
