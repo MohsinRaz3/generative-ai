@@ -4,3 +4,8 @@ streamlit
 SQLAlchemy
 pydantic
 psycopg2-binary
+httpx
+requests
+fastapi
+uvicorn
+httpie

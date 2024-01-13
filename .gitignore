@@ -1,2 +1,9 @@
 .env
 *.env
+**.env
+.secrets.toml
+*.secrets.toml
+**.secrets.toml
+.streamlit
+*.streamlit
+**.streamlit
